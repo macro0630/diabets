@@ -6,15 +6,18 @@ import joblib
 
 def run_ml_app():
     classifier = joblib.load('data/best_model.pkl')
+    print(1)
     scaler_X = joblib.load('data/scaler_X.pkl')
-
+    print(2)
     st.subheader('데이터를 입력하면 당뇨병을 예측!')
-
+    print(3)
     # Pregnancies	Glucose	BloodPressure	SkinThickness	
     # Insulin	BMI	DiabetesPedigreeFunction	Age
 
     pregnancies = st.number_input('임신횟수', min_value=0)
+    print(4)
     glucose = st.number_input('Glucose', min_value=0)
+    print(5)
     pressure = st.number_input('BloodPressure', min_value=0)
     skinthickness = st.number_input('SkinThickness', min_value=0)
     insulin = st.number_input('Insulin', min_value=0)    
